@@ -1,0 +1,68 @@
+@import "../../assets/scss/base/colors";
+@import"../../assets/scss/base/fonts";
+@import"../../assets/scss/base/mixins";
+@import"../../assets/scss/base/typography";
+
+
+.footer{
+    height:auto;
+    background-color: rgb(4,4,72);
+    @include d-flex-h-center(center); 
+    color: #fff;
+   padding: 5rem 0;
+
+
+    .content{
+        @include d-flex-h-center(center);
+        gap:15rem;
+        width: 80%;
+
+        .lists{
+            .list-items{
+                .items{
+                    list-style: none;
+                    line-height: 3.5rem;
+                    font-size: 1.4rem;
+                    h2{
+                        font-size:$font-size-15;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.icon-area{
+    height:auto;
+    @include d-flex(center,center);
+  
+   
+
+
+.icons{
+    width:80rem;
+    @include d-flex-direction-align-justify(center,center);
+    padding: 2rem;
+
+    span{
+        display:flex;
+        gap:2em;
+        i{
+            font-size: $font-size-22;
+        }
+    }
+
+    p{
+        font-size: $font-size-14;
+        padding: 1rem;
+        color:$gray18;
+
+        a{
+
+            color: $gray18;
+        }
+    }
+
+}
+}

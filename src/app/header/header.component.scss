@@ -1,0 +1,49 @@
+@import "../../assets/scss/base/colors";
+@import"../../assets/scss/base/fonts";
+@import"../../assets/scss/base/mixins";
+@import"../../assets/scss/base/typography";
+.nav {
+    @include d-flex(space-evenly,center);
+    font-size: $font-size-14;
+    height: 9rem;
+    position: relative;
+    z-index: 100;
+    box-shadow:0px 3px 19px #00000029;
+
+
+    .main-content {
+        font-size: $font-size-18;
+        margin-top: 2rem;
+        position: relative;
+        left: 7em;
+
+    }
+    .brand-name{
+        font-weight: 700;
+    }
+    .brand-name2{
+        color: orange;
+        letter-spacing: 0.3rem;
+
+    }
+    .tag-line{
+        font-size: $font-size-8;
+
+    }
+    .li
+    .list-content{
+        @include nav-list-flex-content(2rem,35em);
+
+    }
+    .list-items{
+        @include nav-list-flex-items(4rem);
+
+    }
+    .list-select{
+        border:none;
+        margin-right: 5rem;
+        font-size: $font-size-16;
+    }
+
+
+ }

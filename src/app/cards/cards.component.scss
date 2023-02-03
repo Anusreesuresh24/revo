@@ -1,0 +1,80 @@
+@import"../../assets/scss/base/colors";
+@import"../../assets/scss/base/fonts";
+@import"../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+.card-area {
+    @include d-flex(center, center);
+    height: 90vh;
+
+
+
+
+    .content-area {
+        @include flex-v-center;
+        gap: 3rem;
+
+
+        .single-card {
+            @include height-width(49rem, 42rem);
+            box-shadow: 0px 3px 16px #00000029;
+            border: 1px solid #f1f1f1;
+            border-radius: 9px;
+            opacity: 1;
+            @include d-flex-direction-justify(column,center);
+            gap: 2rem;
+
+
+            .img-area {
+                text-align: center;
+
+                img {
+                    @include height-width(17rem, 25rem);
+                }
+
+            }
+
+            .text-area {
+                @include flex-fd-column;
+                text-align: center;
+                @include d-flex(center, center);
+
+                h2 {
+                    margin-bottom: 15px;
+                    color: rgb(17, 16, 16);
+                    font-size: $font-size-19;
+
+                }
+
+                p {
+                    font-size: $font-size-14;
+                    color: $gray18;
+                    line-height: 2em;
+                    width: 34rem;
+
+
+
+                }
+
+                .card-btn {
+                    @include button-style(1.5rem, 17rem, 3.5rem);
+                    color: $orange3;
+                    font-size: $font-size-14;
+                    border: 0.2rem solid orangered;
+                    font-weight: $font-weight-bold;
+                    margin-top: 2rem;
+                    background-color: #FFFFFF;
+
+                }
+
+            }
+
+        }
+
+
+
+
+    }
+
+
+}

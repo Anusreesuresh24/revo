@@ -1,0 +1,90 @@
+@import"../../assets/scss/base/colors";
+@import"../../assets/scss/base/fonts";
+@import"../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+.background{
+    
+    background-image: url("../../assets/revo\ img.svg");
+    @include d-flex-h-center(center);
+    @include background-repeat-size;
+    height: 53vh;
+  
+    
+    .content{
+
+        @include d-flex-direction-align-justify(flex-start, center);
+        width:80%;
+        gap: 5rem;
+
+        .text-area{
+
+            font-weight: $font-weight-bold;
+            font-size:8rem;
+            color: #ffff;
+            p{
+
+            }
+            .sub-head{
+                color:black;
+            }
+
+        }
+        .logo-content{
+            @include d-flex-direction-align(column,center);
+             gap:1rem;
+            
+
+            .logo-p{
+                color: #ffff;
+                font-size: 1.5rem;
+
+            }
+            .btns{
+                display: flex;
+                gap:2rem;
+            
+                .icon-area{
+                    display: flex;
+                    background-color: black;
+                    padding: 1rem;
+                    bottom: 2rem;
+                    width: 16rem;
+                    gap:1.5rem;
+                    border-radius: 1rem;
+                    box-shadow: 3px 3px 8px #0000005E;  
+                    .logo{
+                        display:flex;
+
+                        i{
+                            font-size: $font-size-28;
+                            color: #ffff;
+                        }
+                        img{
+                            width:3rem;
+                        }
+                    }
+                    .text{
+                        .head{
+                            font-size: $font-size-8;
+                            color: #ffff;
+                        }
+                        .head2{
+                            font-size:$font-size-14;
+                            color: #ffff;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

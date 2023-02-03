@@ -1,0 +1,129 @@
+@import"../../assets/scss/base/colors";
+@import"../../assets/scss/base/fonts";
+@import"../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+
+
+
+.main {
+    height: auto;
+    background-color: rgb(225, 243, 246);
+    @include d-flex(center,flex-start);
+
+
+
+
+    .container {
+        @include d-flex(center,flex-start);
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 5rem;
+        margin-bottom: 15rem;
+
+        .text {
+            padding-top: 4rem;
+            @include flex-fd-column;
+       
+            gap: 2rem;
+            h2 {
+                font-size: $font-size-22;
+            }
+
+            .sub-head {
+                font-size: $font-size-18;
+                color: $gray18;
+
+            }
+        }
+
+        .card-group {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+
+
+            .card-main {
+                position: relative;
+                @include d-flex(center,center);
+                
+
+                .img-area {
+
+
+                    img {
+                        width: 39rem;
+                        border-radius: 1rem;
+
+                    }
+                }
+
+                .rent-text {
+                    position: absolute;
+                    background-color: rgb(62, 190, 233);
+                    padding: 0.7 rem;
+                    width: 6rem;
+                    top: 1em;
+                    border-bottom-right-radius: 1rem;
+                    padding-left: 2rem;
+                    margin-right: 33rem;
+
+                    span {
+                        color: #fff;
+
+                    }
+
+                }
+
+                .card-text {
+                    position: absolute;
+                    @include height-width(15rem,33rem);
+                    background-color:white;
+                    margin-left: 6rem;
+                    bottom: -8rem;
+                    box-shadow: -8px -6px 19px #00000029;
+                    align-items: center;
+                    padding: 4rem;
+                    line-height: 3rem;
+                    border-radius: 15px 0px 0px 15px;
+
+
+
+
+                    h3 {
+                        font-size: $font-size-17;
+                    }
+
+                    .card-text-p {
+                        color: $gray18;
+                        font-size: $font-size-14;
+
+                    }
+
+                    h4 {
+                        font-size: $font-size-18;
+                    }
+                }
+
+                .card-round {
+                    position: absolute;
+                    background-color: rgb(251, 249, 253);
+                    border-radius: 50%;
+                     padding: 2rem;
+                     bottom: 3.1rem;
+                     right: 24rem;
+                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                     color: rgb(12, 12, 77);
+
+                    .icon {
+                        // font-size: $font-size-14;
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+}

@@ -1,0 +1,280 @@
+@import"../../assets/scss/base/colors";
+@import"../../assets/scss/base/fonts";
+@import"../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+
+
+.content {
+    @include d-flex(center, center);
+    background-color: #1dc6d8;
+    height: 70vh;
+
+    .text {
+        @include flex-fd-column;
+        @include d-flex(center, center);
+        line-height: 6em;
+
+        .heading {
+            font-size: 6.5rem;
+            font-weight: $font-weight-bold;
+            color: aliceblue;
+        }
+
+        .sub-heading {
+            font-size: $font-size-18;
+            font-weight: $font-weight-bold;
+            color: aliceblue
+        }
+
+        .btn {
+            @include button-style(1.2em, 12em, 2.5em);
+            font-family: $family;
+            font-weight: $font-weight-bold;
+            @include border-outline-none;
+
+        }
+    }
+
+    //bottom nav
+    .bottom-nav {
+        @include p-absolute-mt(15rem);
+        font-size: $font-size-14;
+
+        .list {
+            @include d-flex(space-evenly, center);
+            @include nav-list-flex-content(2rem, 35em);
+            @include bottom-nav(1rem, 0.1rem);
+            @include height-width(4em, 60em);
+            @include mg-padding(0 10rem, 0);
+            background-color: rgb(0, 0, 0);
+            color: antiquewhite;
+
+            .items {
+                @include nav-list-flex-items(5rem);
+                font-size: $font-size-12;
+                border-right: 0.1rem solid white;
+                @include mg-padding(0, 0 4rem 0);
+            }
+
+            .items:nth-child(5) {
+                border: none;
+
+            }
+
+        }
+
+    }
+
+    //search bar
+    .search-bar {
+        @include p-absolute-mt(9rem);
+        border-radius: 20rem;
+        background-color: #FFFFFF;
+        box-shadow: 6px 9px 19px #00000029;
+        @include height-width(null, 95rem);
+        padding: 0.7rem;
+
+
+        .list2 {
+            @include flex-v-center;
+            list-style-type: none;
+
+
+
+            .location {
+                padding-left: 2rem;
+
+                i {
+                    font-size: $font-size-28;
+                    color: $gray18;
+
+                }
+            }
+
+            .choose {
+                padding: 1rem;
+                border-right: 0.2rem solid $gray2;
+                @include flex-v-center;
+
+
+                .list-select2 {
+                    @include border-outline-none;
+                    font-family: $family;
+                    padding-right: 2rem;
+
+                }
+            }
+
+            .search-input {
+                flex: 1;
+
+                .search {
+                    @include height-width(5rem, 45rem);
+                    @include border-outline-none;
+                    padding-right: 1rem;
+                    padding-left: 3rem;
+                    flex: 1;
+
+                }
+            }
+
+            .button {
+                .search-btn {
+                    @include button-style(0.8em 3rem, null, 3.5rem);
+                    color: orange;
+                    font-size: $font-size-18;
+                    border: 0.2rem solid orangered;
+                    font-weight: $font-weight-bold;
+                    background-color: #FFFFFF;
+
+
+                }
+            }
+
+            .location,
+            .choose.list-select2,
+            .search-input,
+            ::placeholder {
+                color: $gray2;
+                font-size: $font-size-15;
+                font-family: $family;
+            }
+
+        }
+    }
+}
+
+.section-2 {
+    @include d-flex(center, center);
+    height: 60vh;
+
+    .popular-searches {
+        @include bottom-nav(0, 0);
+        @include height-width(6rem, 120em);
+        margin-top: -13rem;
+
+
+        .search-lists {
+            @include nav-list-flex-content(4rem, 0);
+            @include d-flex(space-evenly, center);
+            @include mg-padding(2rem, 0);
+            color: $gray18;
+
+            .search-area {
+                padding: 0.1rem;
+                font-size: $font-size-20;
+
+                .icon {
+                    font-size: $font-size-20;
+                    margin-right: 2rem;
+                    color: $gray18;
+                    padding: 0.1rem;
+
+
+                }
+
+                .text-area {
+                    margin-right: 2rem;
+                    color: $gray18;
+                }
+            }
+
+            .searched-items {
+                background-color: #f4f0f0;
+                @include height-width(6rem, 120em);
+                width: 10em;
+                height: 3.5em;
+                text-align: center;
+                padding: 1em;
+                border-radius: 3rem;
+
+
+            }
+
+        }
+
+
+    }
+
+
+
+
+    .maincards-1 {
+        @include d-flex(center, center);
+        justify-content: center;
+        background-color: white;
+        align-items: baseline;
+        margin-top: 1em;
+
+
+        .subcards {
+            @include d-flex(space-between, center);
+            @include flex-fd-column;
+        }
+    }
+
+
+    .card-group {
+        @include d-flex-position(absolute);
+        gap: 6rem;
+        margin-bottom: -11rem;
+
+        .card-box {
+            @include height-width(10rem, 10rem);
+            padding: 1rem;
+            box-shadow: 0px 3px 16px #00000029;
+            border-radius: 9px;
+            opacity: 1;
+            position: relative;
+
+
+            .icon-box {
+                position: absolute;
+                font-size: $font-size-30;
+                background-color: rgba(236, 161, 207, 0.49);
+                opacity: 1;
+                border-radius: 50%;
+                padding: 0.5rem 1.2rem;
+                right: 27px;
+                bottom: 33px;
+
+
+                .round-1 {
+                    position: absolute;
+                    background-color: rgba(239, 164, 228, 0.54);
+                    padding: 7px;
+                    border-radius: 50%;
+                    left: -2px;
+                    top: 35px;
+
+
+                }
+
+                .round-2 {
+                    position: absolute;
+                    background-color: rgba(236, 67, 205, 0.255);
+                    padding: 11px;
+                    border-radius: 50%;
+                    top: -2px;
+                    right: -7px;
+
+                }
+
+                .icons {
+                    color: gray;
+                    font-size: $font-size-18;
+                }
+            }
+
+            .card-text {
+                margin-top: 11rem;
+                font-size: $font-size-14;
+                text-align: center;
+                color: $gray18;
+            }
+        }
+
+    }
+
+}
